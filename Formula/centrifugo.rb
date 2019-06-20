@@ -2,9 +2,15 @@
 class Centrifugo < Formula
   desc "Real-time messaging server"
   homepage "https://github.com/centrifugal/centrifugo"
-  url "https://github.com/centrifugal/centrifugo/releases/download/v2.2.1/centrifugo_2.2.1_darwin_amd64.tar.gz"
-  version "2.2.1"
-  sha256 "946bca2a65e064b21e978420757f28bb6d93e82153a8cab8e5dacdc7cc693eff"
+  version "2.2.2"
+
+  if OS.mac?
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.2.2/centrifugo_2.2.2_darwin_amd64.tar.gz"
+    sha256 "61bee06b10e3020ace32e3bd8c020b1a298b0fa04a572446a74c8cc6a256fcfd"
+  elsif OS.linux?
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.2.2/centrifugo_2.2.2_linux_amd64.tar.gz"
+    sha256 "69186ef8e55603118a008f9a2c3a593d2c314dac825351e9385c8576e1598e21"
+  end
 
   def install
     bin.install "centrifugo"
