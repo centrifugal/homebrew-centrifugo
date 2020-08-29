@@ -2,22 +2,22 @@
 class Centrifugo < Formula
   desc "Real-time messaging server"
   homepage "https://github.com/centrifugal/centrifugo"
-  version "2.6.1"
+  version "2.6.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.1/centrifugo_2.6.1_darwin_amd64.tar.gz"
-    sha256 "fc963744541b5a5f11a145e71248ec7f15fcc8fd22c35ee1c6f4084b725e62bd"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.2/centrifugo_2.6.2_darwin_amd64.tar.gz"
+    sha256 "989139177e890403d011f567e82c1ba5f36539941fb7fa94256e40787412e32b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.1/centrifugo_2.6.1_linux_amd64.tar.gz"
-      sha256 "e721310f3dfb09e91c53e1d70f79b9a8a8a6a4eacfe3492e220ccec3d617344d"
+      url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.2/centrifugo_2.6.2_linux_amd64.tar.gz"
+      sha256 "77c300a0b53805b9da0f575a71b104162f9a42b1f05ac31635c6f3c4d7198613"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
       else
-        url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.1/centrifugo_2.6.1_linux_armv6.tar.gz"
-        sha256 "2a8d823ca19a7aa736300be0d76d42eb5b6c732623b1f96642126391a10e4f44"
+        url "https://github.com/centrifugal/centrifugo/releases/download/v2.6.2/centrifugo_2.6.2_linux_armv6.tar.gz"
+        sha256 "38e5d895913331d669ffd3e142610e6a120dd32c5b89f11a92811b4f3772160b"
       end
     end
   end
