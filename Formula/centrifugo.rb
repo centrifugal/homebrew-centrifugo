@@ -5,20 +5,28 @@
 class Centrifugo < Formula
   desc "Real-time messaging server"
   homepage "https://github.com/centrifugal/centrifugo"
-  version "2.8.2"
+  version "2.8.3"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.2/centrifugo_2.8.2_darwin_amd64.tar.gz"
-    sha256 "8f310deecdf373d7237d2fcae565ebf8771b24ab7ac8e975b234b677804d4a61"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_darwin_amd64.tar.gz"
+    sha256 "8814d2bcfc63b93b422b65b30fbe436b2c1ed5993d642fbd5db83dacb57bc860"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_darwin_arm64.tar.gz"
+    sha256 "e5716bd718c96bbbd335869388ecebf603a2539fbcba9e591dc7eddfd39653b9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.2/centrifugo_2.8.2_linux_amd64.tar.gz"
-    sha256 "4dbdd7cf302b0e5f59428afaed8497f811fbae552c72e535ca416247e26466a0"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_amd64.tar.gz"
+    sha256 "83c113b5f10e3d3c775a0da1b6596d8225b3659d44bc183f2be687c3e76729ab"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.2/centrifugo_2.8.2_linux_armv6.tar.gz"
-    sha256 "3d09f53e67574acb8a762397f8f7c8b09e8975c40a50936b132c802ef55dea55"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_armv6.tar.gz"
+    sha256 "a1b1b8bd0e75f66732d42797398a8ec5e22ef0946b99f03ee6293b096903f7a6"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_arm64.tar.gz"
+    sha256 "595adb7c9591fde853af06638f886d332ed12f8483573b3f929dd4f629476af2"
   end
 
   def install
