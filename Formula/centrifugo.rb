@@ -5,28 +5,28 @@
 class Centrifugo < Formula
   desc "Real-time messaging server"
   homepage "https://github.com/centrifugal/centrifugo"
-  version "2.8.3"
+  version "2.8.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_darwin_amd64.tar.gz"
-    sha256 "8814d2bcfc63b93b422b65b30fbe436b2c1ed5993d642fbd5db83dacb57bc860"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.4/centrifugo_2.8.4_darwin_amd64.tar.gz"
+    sha256 "2dbc3408d86a076a004e11b485153b81523b06e460926850bd4871bb3bc239a3"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_darwin_arm64.tar.gz"
-    sha256 "e5716bd718c96bbbd335869388ecebf603a2539fbcba9e591dc7eddfd39653b9"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.4/centrifugo_2.8.4_darwin_arm64.tar.gz"
+    sha256 "04131f011b5403a31bdcf764a1be7986f1365d7268e6fd33678835de190cf684"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_amd64.tar.gz"
-    sha256 "83c113b5f10e3d3c775a0da1b6596d8225b3659d44bc183f2be687c3e76729ab"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.4/centrifugo_2.8.4_linux_amd64.tar.gz"
+    sha256 "bbb23b82fb4a926a802328d22718248b1ae7852ad6504b332056d40550eb1a51"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_armv6.tar.gz"
-    sha256 "a1b1b8bd0e75f66732d42797398a8ec5e22ef0946b99f03ee6293b096903f7a6"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.4/centrifugo_2.8.4_linux_armv6.tar.gz"
+    sha256 "d011a5a57dacc8780f74548d80ff18e9c46aea779455619cbd5e5712956b9a4e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.3/centrifugo_2.8.3_linux_arm64.tar.gz"
-    sha256 "595adb7c9591fde853af06638f886d332ed12f8483573b3f929dd4f629476af2"
+    url "https://github.com/centrifugal/centrifugo/releases/download/v2.8.4/centrifugo_2.8.4_linux_arm64.tar.gz"
+    sha256 "fb7bba6f1e824ba93ce77618aff3f7866c3c1d91892d31058a9620d7018174b0"
   end
 
   def install
