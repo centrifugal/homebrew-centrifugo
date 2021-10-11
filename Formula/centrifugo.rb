@@ -5,32 +5,32 @@
 class Centrifugo < Formula
   desc "Scalable real-time messaging server in a language-agnostic way"
   homepage "https://github.com/centrifugal/centrifugo"
-  version "3.0.2"
+  version "3.0.3"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.2/centrifugo_3.0.2_darwin_amd64.tar.gz"
-      sha256 "703e5737ddacee2fe5c74b7ced19b6abff024013ae92a0bb15720cf7a0f50b2c"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.2/centrifugo_3.0.2_darwin_arm64.tar.gz"
-      sha256 "fe9dab3607547859e34c2f41bafb8b8914f8b58a1371d831ff4a086282c7cc61"
+      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.3/centrifugo_3.0.3_darwin_arm64.tar.gz"
+      sha256 "de869134e3e9fe3a4b1c918b592ad71c96a78322fa1ba4ddd0783eafb8d4016c"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.3/centrifugo_3.0.3_darwin_amd64.tar.gz"
+      sha256 "f026c1a785bbd87e5a33fcd8ec0c0b52cd9e6d1ace9a1007b12101f5acb11e36"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.2/centrifugo_3.0.2_linux_armv6.tar.gz"
-      sha256 "4d3ef9d689924b8c5c4dc5faaae24ab485d626c0f85dcb8412dcfb14bd693d1a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.3/centrifugo_3.0.3_linux_arm64.tar.gz"
+      sha256 "569dcd8163357ec1b3a88cb4d4f4a4e1974c6c3a3eabb1fa53be59967758a957"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.2/centrifugo_3.0.2_linux_amd64.tar.gz"
-      sha256 "2c9d62cf126f434e1b0068bec283a6e34e7bef0e4ac96faa42fc29b3b19cfc64"
+      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.3/centrifugo_3.0.3_linux_amd64.tar.gz"
+      sha256 "8e14fd66ca3c62889e76b3127567338a768f9682b88f1ad47e4b2c66780115f8"
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.2/centrifugo_3.0.2_linux_arm64.tar.gz"
-      sha256 "b2b340079972a8c69eaee66e51e17016ee7ec32e1fbf8c712ba5f1479209c805"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/centrifugal/centrifugo/releases/download/v3.0.3/centrifugo_3.0.3_linux_armv6.tar.gz"
+      sha256 "b2896ffc43593820e386feffba65798ff331a4e4e4a88e2ba57cd8e09e3fc6e8"
     end
   end
 
