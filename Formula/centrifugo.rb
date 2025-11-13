@@ -5,20 +5,20 @@
 class Centrifugo < Formula
   desc "Scalable real-time messaging server in a language-agnostic way"
   homepage "https://github.com/centrifugal/centrifugo"
-  version "6.5.0"
+  version "6.5.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.0/centrifugo_6.5.0_darwin_amd64.tar.gz"
-      sha256 "60e512e7df62b10f2ae9b70d930517cd3c7c65fee6847f9639cf8b997e5b4665"
+      url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.1/centrifugo_6.5.1_darwin_amd64.tar.gz"
+      sha256 "7e1cc02e8715f5d93a5f3d3b579d4a967b44a78629de2bfa41dbb1bb0df264cf"
 
       def install
         bin.install "centrifugo"
       end
     end
     on_arm do
-      url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.0/centrifugo_6.5.0_darwin_arm64.tar.gz"
-      sha256 "a43f032d009c9c1cdbaca25bd6b3714b9b3c784534fecc29bb6b9baf3eb8c081"
+      url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.1/centrifugo_6.5.1_darwin_arm64.tar.gz"
+      sha256 "f392bd893eac56e80ce0bd8ce43d6823b7aa6f437b0fe994ec6fdaf56af61364"
 
       def install
         bin.install "centrifugo"
@@ -29,8 +29,8 @@ class Centrifugo < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.0/centrifugo_6.5.0_linux_amd64.tar.gz"
-        sha256 "bf3d68f7a5f376b3bb93ebd37bf8842c5bdbffad229a456fdc7cdb85772f32bc"
+        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.1/centrifugo_6.5.1_linux_amd64.tar.gz"
+        sha256 "f2945512619ec86fe13ec2edd29aa1c813428b9bad6979d4a69d6573a83239f9"
 
         def install
           bin.install "centrifugo"
@@ -39,8 +39,8 @@ class Centrifugo < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.0/centrifugo_6.5.0_linux_armv6.tar.gz"
-        sha256 "123f16ff29a1051e0a6a71b2b0b40eb1a5b34c97b38e2285073a3e7aa2990ce3"
+        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.1/centrifugo_6.5.1_linux_armv6.tar.gz"
+        sha256 "d9c78f6fb8de5fe3ba84257cbee10954503021e3e2fcc72f5401073897334548"
 
         def install
           bin.install "centrifugo"
@@ -49,8 +49,8 @@ class Centrifugo < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.0/centrifugo_6.5.0_linux_arm64.tar.gz"
-        sha256 "5c0d6e55c40e50c48ce5dfa6aed8453a31a9753fee413139eca2320135fe1bd7"
+        url "https://github.com/centrifugal/centrifugo/releases/download/v6.5.1/centrifugo_6.5.1_linux_arm64.tar.gz"
+        sha256 "46cf622a2e24d9655fccf820807b093b1181eee49ddc99de509d77a2bbd84179"
 
         def install
           bin.install "centrifugo"
