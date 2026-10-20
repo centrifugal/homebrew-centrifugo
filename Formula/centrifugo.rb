@@ -10,7 +10,7 @@ class Centrifugo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/centrifugal/centrifugo/releases/download/v6.10.1/centrifugo_6.10.1_darwin_amd64.tar.gz"
-      sha256 "14172a742c19f7350bc1aa931cc288924d96ce6a589b3f7e1b64061540f1651d"
+      sha256 "fb9f59942a3ca47a67408f14b91c77fb3f4773d1eec021b536e8c42b7ba767b6"
 
       define_method(:install) do
         bin.install "centrifugo"
@@ -18,7 +18,7 @@ class Centrifugo < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/centrifugal/centrifugo/releases/download/v6.10.1/centrifugo_6.10.1_darwin_arm64.tar.gz"
-      sha256 "3bb79856958ad08ad094219b8bdc3405b91d0ef2ad48028a45190e65e42fc112"
+      sha256 "fb854f08c163b2063a64e9f455ea5baa9fbc3db29452cbc1fb5c17d46d0e1ec1"
 
       define_method(:install) do
         bin.install "centrifugo"
@@ -29,21 +29,21 @@ class Centrifugo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/centrifugal/centrifugo/releases/download/v6.10.1/centrifugo_6.10.1_linux_amd64.tar.gz"
-      sha256 "7f309b90f7d565f960387f9e2099d12ebd6a8a16ffc4fe7c38977dc45b1c077f"
+      sha256 "551b52f78c4c64fc606d7e0d1fedb2f710f2f4ddce2af7f3147857061b747f23"
       define_method(:install) do
         bin.install "centrifugo"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/centrifugal/centrifugo/releases/download/v6.10.1/centrifugo_6.10.1_linux_armv6.tar.gz"
-      sha256 "d57953974e418dd6617204038382b8774804c6814835dc97495f53f25144df64"
+      sha256 "8d44baa472adcd978f08ff85ed2d49617f6415117d0b92e57b5596df5aa7d5cf"
       define_method(:install) do
         bin.install "centrifugo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/centrifugal/centrifugo/releases/download/v6.10.1/centrifugo_6.10.1_linux_arm64.tar.gz"
-      sha256 "54da6202924a7f72d876c568372e0bb291895539714d36e6e7c801268d695f1e"
+      sha256 "d9571d7bf050d8080e5b1b05e61fbe3be2acbd66ebe4d445a70425de43626aaf"
       define_method(:install) do
         bin.install "centrifugo"
       end
